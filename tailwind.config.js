@@ -10,13 +10,15 @@ module.exports = {
   // daisyUI config
   daisyui: {
     styled: true,
-    themes: true,
+    themes: [
+      "luxury",
+      "halloween",
+    ],
     base: true,
     utils: true,
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: "luxury",
   },
 }
 
