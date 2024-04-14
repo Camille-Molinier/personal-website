@@ -42,10 +42,4 @@ export class NavigationComponent implements OnInit{
       element.scrollIntoView({behavior:"smooth"});
     }
   }
-  toContact(): void {
-    let element = document.getElementById("contact");
-    if(element != null) {
-      element.scrollIntoView({behavior:"smooth"});
-    }
-  }
 }

@@ -44,3 +44,4 @@ Thumbs.db
 # Webstorm and vs code folder
 .idea
 .vscode
+/.firebase/
