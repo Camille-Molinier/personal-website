@@ -1,0 +1,16 @@
+<div class="flex flex-col justify-center pt-3">
+  <div
+    class="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto bg-base-300">
+    <div class="w-full md:w-1/3 grid place-items-center">
+      <img src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="tailwind logo" class="rounded-xl" />
+    </div>
+    <div class="w-full md:w-2/3 flex flex-col justify-between space-y-4">
+      <h3 class="font-black text-primary md:text-3xl text-xl">{{ project.title }}</h3>
+      <p class="md:text-lg text-neutral-content text-base">{{ project.description }}</p>
+      <div class="flex flex-wrap space-x-1.5">
+        <div class="badge badge-primary badge-outline" *ngFor="let badge of project.badges">{{badge}}</div>
+      </div>
+      <button class="btn btn-outline btn-primary w-44" (click)="openDetails(project.link)">See more</button>
+    </div>
+  </div>
+</div>
