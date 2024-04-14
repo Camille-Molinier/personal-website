@@ -1,9 +1,18 @@
-<section class="min-h-screen max-h-screen base-content flex justify-center items-center h-screen" id="projects">
-
-  <section class="mockup-code w-7/12">
-    <pre data-prefix="$"><code>this section is under construction</code></pre>
-    <pre data-prefix="$" class="text-warning"><code>sudo please wait</code></pre>
-    <pre data-prefix=">" class="text-success"><code>Thanks !</code></pre>
+<section class="bg-base-200 justify-items-start items-start" id="projects">
+  <section class="pt-10">
+    <div class="container max-w-5xl px-4 py-12 mx-auto">
+      <div class="grid gap-4 mx-4 sm:grid-cols-12">
+        <div class="col-span-12 sm:col-span-3">
+          <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-primary">
+            <h3 class="text-3xl font-semibold">Projects</h3>
+          </div>
+        </div>
+        <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+          <div class="projects-container">
+            <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-
 </section>
