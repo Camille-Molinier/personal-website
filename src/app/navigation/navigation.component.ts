@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit{
+  protected isScrolled: boolean = false;
+
+  ngOnInit() {
+
+    window.addEventListener('scroll', () => {
+      this.isScrolled = window.scrollY > 0;
+    });
+  }
 
   toHome(): void {
     let element = document.getElementById("home");
@@ -28,6 +36,12 @@ export class NavigationComponent {
     }
   }
 
+  toPublications(): void {
+    let element = document.getElementById("publications");
+    if(element != null) {
+      element.scrollIntoView({behavior:"smooth"});
+    }
+  }
   toContact(): void {
     let element = document.getElementById("contact");
     if(element != null) {
